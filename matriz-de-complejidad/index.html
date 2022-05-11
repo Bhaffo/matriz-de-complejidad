@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matriz de complejidad</title>
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    
+</head>
+
+<body>
+    <fieldset class="negocio">
+        <legend>Matriz de negocio</legend>
+        <table>
+            <thead>
+                <tr>
+                    <th>Atributo del negocio</th>
+                    <th>Zona I: complejidad baja</th>
+                    <th>Zona II: complejidad media</th>
+                    <th>Zona III: complejidad alta</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cantidad de ejecutivos de la organizacion con conocimientos en esta rama del negocio</td>
+                    <td>
+                        <label class="contenedor">
+                            Solo uno
+                            <input class="boton" type="radio" name="a" id="a1" value=1>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="contenedor">
+                            Entre 2 y 3
+                            <input class="boton" type="radio" name="a" id="a2" value=2>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="contenedor">
+                            Ninguno
+                            <input class="boton" type="radio" name="a" id="a3" value=3>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Definición de Objetivos del negocio.</td>
+                    <td>
+                        <label class="contenedor">
+                            Metodo SMART
+                            <input class="boton" type="radio" name="b" id="b1" value=1>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="contenedor">
+                            Metodo SMART parcial
+                            <input class="boton" type="radio" name="b" id="b2" value=2>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="contenedor">
+                            Vagos
+                            <input class="boton" type="radio" name="b" id="b3" value=3>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Procesos del negocio</td>
+                    <td>
+                        <label class="contenedor">
+                            Pocos (1 a 4)
+                            <input class="boton" type="radio" name="c" id="c1" value=1>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="contenedor">
+                            5 a 6
+                            <input class="boton" type="radio" name="c" id="c2" value=2>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="contenedor">
+                            Mas de 6
+                            <input class="boton" type="radio" name="c" id="c3" value=3>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Politicas de negocio</td>
+                    <td>
+                        <label class="contenedor">
+                            Existentes
+                            <input class="boton" type="radio" name="d" id="d1" value=1>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="contenedor">
+                            Vagas
+                            <input class="boton" type="radio" name="d" id="d2" value=2>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="contenedor">
+                            Inexistentes
+                            <input class="boton" type="radio" name="d" id="d3" value=3>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Regulaciones del negocio (Superintendencia o SII)</td>
+                    <td>
+                        <label class="contenedor">
+                            Pocas y simples
+                            <input class="boton" type="radio" name="e" id="e1" value=1>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="contenedor">
+                            Pocas y complejas
+                            <input class="boton" type="radio" name="e" id="e2" value=2>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="contenedor">
+                            Muchas y complejas
+                            <input class="boton" type="radio" name="e" id="e3" value=3>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Experiencia del personal</td>
+                    <td>
+                        <label class="contenedor">
+                            Experimentado
+                            <input class="boton" type="radio" name="f" id="f1" value=1>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="contenedor">
+                            Poca experiencia
+                            <input class="boton" type="radio" name="f" id="f2" value=2>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="contenedor">
+                            Sin experiencia
+                            <input class="boton" type="radio" name="f" id="f3" value=3>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ambito geografico del negocio</td>
+                    <td>
+                        <label class="contenedor">
+                            Una localizacion
+                            <input class="boton" type="radio" name="g" id="g1" value=1>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="contenedor">
+                            Regional
+                            <input class="boton" type="radio" name="g" id="g2" value=2>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="contenedor">
+                            Global
+                            <input class="boton" type="radio" name="g" id="g3" value=3>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Reglas internas del negocio</td>
+                    <td>
+                        <label class="contenedor">
+                            Establecidas
+                            <input class="boton" type="radio" name="h" id="h1" value=1>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="contenedor">
+                            Vagas
+                            <input class="boton" type="radio" name="h" id="h2" value=2>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="contenedor">
+                            Inexistentes
+                            <input class="boton" type="radio" name="h" id="h3" value=3>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <button id="calculo">Calcular total</button>
+                    </td>
+                    <td><label id="totalA"></label></td>
+                </tr>
+            </tbody>
+        </table>
+    </fieldset>
+
+    <br>
+
+    <fieldset class="plataforma">
+        <legend>Matriz de plataforma tecnologica</legend>
+        <table>
+            <thead>
+                <tr>
+                    <th>Atributo de la tecnologia</th>
+                    <th>Zona I: complejidad baja</th>
+                    <th>Zona II: complejidad media</th>
+                    <th>Zona III: complejidad alta</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Arquitectura tecnologica del proyecto</td>
+                    <td>
+                        <label class="contenedor">
+                            Existente
+                            <input class="boton" type="radio" name="11" id="11" value=1>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="contenedor">
+                            Existentes, pero no desarrolladas
+                            <input class="boton" type="radio" name="11" id="12" value=2>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="contenedor">
+                            Inexistentes
+                            <input class="boton" type="radio" name="11" id="13" value=3>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Proveedores de tecnologia y telecomunicaciones</td>
+                    <td>
+                        <label class="contenedor">
+                            Antiguos (4+ años en el mercado)
+                            <input class="boton" type="radio" name="22" id="21" value=1>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="contenedor">
+                            Antiguos (4- años en el mercado)
+                            <input class="boton" type="radio" name="22" id="22" value=2>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="contenedor">
+                            Nuevos
+                            <input class="boton" type="radio" name="22" id="23" value=3>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Localizacion de los dispositivos a controlar</td>
+                    <td>
+                        <label class="contenedor">
+                            Una
+                            <input class="boton" type="radio" name="33" id="31" value=1>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="contenedor">
+                            3 a 4
+                            <input class="boton" type="radio" name="33" id="32" value=2>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="contenedor">
+                            5 o mas
+                            <input class="boton" type="radio" name="33" id="33" value=3>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Personal de areas tecnologicas</td>
+                    <td>
+                        <label class="contenedor">
+                            Experimentado, mas de 2 años
+                            <input class="boton" type="radio" name="44" id="41" value=1>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="contenedor">
+                            Menos de 2 años
+                            <input class="boton" type="radio" name="44" id="42" value=2>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="contenedor">
+                            Sin experiencia
+                            <input class="boton" type="radio" name="44" id="43" value=3>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Cantidad de plataformas</td>
+                    <td>
+                        <label class="contenedor">
+                            Pocas (1 a 3)
+                            <input class="boton" type="radio" name="55" id="51" value=1>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="contenedor">
+                            4
+                            <input class="boton" type="radio" name="55" id="52" value=2>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="contenedor">
+                            Mas de 4
+                            <input class="boton" type="radio" name="55" id="53" value=3>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nivel de integracion de las distintas plataformas acruales</td>
+                    <td>
+                        <label class="contenedor">
+                            Integradas
+                            <input class="boton" type="radio" name="66" id="61" value=1>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="contenedor">
+                            Medianamente integradas
+                            <input class="boton" type="radio" name="66" id="62" value=2>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="contenedor">
+                            Sin integracion
+                            <input class="boton" type="radio" name="66" id="63" value=3>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Plataformas tolerantes a fallas o redundantes</td>
+                    <td>
+                        <label class="contenedor">
+                            Muchas (Mayor a 70%)
+                            <input class="boton" type="radio" name="77" id="71" value=1>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="contenedor">
+                            entre 30% y 69%
+                            <input class="boton" type="radio" name="77" id="72" value=2>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="contenedor">
+                            Menos de 30%
+                            <input class="boton" type="radio" name="77" id="73" value=3>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Obsolescencia de tecnologia</td>
+                    <td>
+                        <label class="contenedor">
+                            Sistemas acctuales (menos de 2 años)
+                            <input class="boton" type="radio" name="88" id="81" value=1>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="contenedor">
+                            No actuales (entre 3 a 4 años)
+                            <input class="boton" type="radio" name="88" id="82" value=2>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="contenedor">
+                            Antiguos (5+ años)
+                            <input class="boton" type="radio" name="88" id="83" value=3>
+                            <span class="checkmark"></span>
+                        </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <button id="calculoB">Calcular total</button>
+                    </td>
+                    <td><label id="totalB"></label></td>
+                </tr>
+            </tbody>
+        </table>
+    </fieldset>
+
+    <br>
+
+    <fieldset class="plataforma">
+        <legend>Grafica</legend>
+        
+        <div class="chartBox">
+            <canvas id="myChart"></canvas>
+        </div>
+
+        
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+        <button id="actualizar">Actualizar</button>
+    </fieldset>
+</body>
+
+<script src="script.js"></script>
+
+</html>
